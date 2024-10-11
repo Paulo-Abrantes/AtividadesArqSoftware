@@ -62,7 +62,6 @@
     </div>
 
     <script>
-        // Função que converte Celsius para Fahrenheit
         function converterTemperatura() {
             const celsius = document.getElementById('celsiusInput').value;
             if (celsius === '') {
@@ -70,10 +69,8 @@
                 return;
             }
 
-            // Lógica de conversão
             const fahrenheit = (celsius * 9/5) + 32;
 
-            // Exibindo o resultado
             document.getElementById('resultado').innerText = `${celsius}°C = ${fahrenheit.toFixed(2)}°F`;
         }
     </script>

@@ -1,9 +1,7 @@
-// Camada de lógica de negócios: validação de idade
 function validarIdade(idade) {
     return idade >= 18;
 }
 
-// Camada de apresentação: interage com o usuário
 function cadastrarUsuario() {
     const nome = document.getElementById('nome').value;
     const idade = parseInt(document.getElementById('idade').value);
@@ -21,19 +19,17 @@ function cadastrarUsuario() {
         return;
     }
 
-    salvarUsuario(nome, idade); // Chama a camada de persistência
+    salvarUsuario(nome, idade);
     mensagem.textContent = "Usuário cadastrado com sucesso!";
     mensagem.classList.add('success');
     limparCampos();
 }
 
-// Limpa os campos de entrada após o cadastro
 function limparCampos() {
     document.getElementById('nome').value = '';
     document.getElementById('idade').value = '';
 }
 
-// Atualiza a lista de usuários cadastrados na interface
 function atualizarListaUsuarios() {
     const listaUsuarios = document.getElementById('listaUsuarios');
     listaUsuarios.innerHTML = '';
